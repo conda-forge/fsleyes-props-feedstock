@@ -1,6 +1,6 @@
 {% set name = "fsleyes-props" %}
-{% set version = "1.6.3" %}
-{% set sha256 = "df5bac8e73da060754a4500ccb485bb4b97738381b2c56ab9bcd5fca0c56599a" %}
+{% set version = "1.6.4" %}
+{% set sha256 = "ff66055a9079547fd7d8194e0f89665e9eed77b64d543a0054f7425708486f48" %}
 
 package:
   name: {{ name|lower }}
@@ -17,15 +17,9 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  host:
+  build:
     - python
-    - numpy
-    - sphinx 1.6.*
-    - sphinx_rtd_theme 0.*
-    - mock 2.*
-    - coverage 4.*
-    - pytest 3.*
-    - pytest-cov 2.*
+    - pip
   run:
     - python
     - deprecation >=1.*,<=2.*
@@ -37,6 +31,15 @@ requirements:
     - fslpy >=1.4,<2
 
 test:
+  source_files:
+    - tests
+  requires:
+    - mock 2.*
+    - coverage 4.*
+    - pytest 3.*
+    - pytest-cov 2.*
+  commands:
+    - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_props
   imports:
     - fsleyes_props
     - fsleyes_props.bindable
