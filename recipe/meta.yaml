@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 
@@ -23,13 +23,12 @@ requirements:
     - pip
   run:
     - python
-    - deprecation >=1.*,<=2.*
     - numpy 1.*
-    - matplotlib >=1.5,<3
+    - matplotlib >=1.5
     - six 1.*
-    - wxpython <4.1
-    - fsleyes-widgets >=0.6.*,<1
-    - fslpy >=1.4,<2
+    - wxpython >=3.0.2.0
+    - fsleyes-widgets >=0.6.*
+    - fslpy >=1.4
 
 test:
   source_files:
@@ -41,27 +40,6 @@ test:
     - pytest-cov 2.*
   commands:
     - xvfb-run -s "-screen 0 640x480x24" pytest -v --cov=fsleyes_props
-  imports:
-    - fsleyes_props
-    - fsleyes_props.bindable
-    - fsleyes_props.build
-    - fsleyes_props.build_parts
-    - fsleyes_props.cache
-    - fsleyes_props.callqueue
-    - fsleyes_props.cli
-    - fsleyes_props.properties
-    - fsleyes_props.properties_types
-    - fsleyes_props.properties_value
-    - fsleyes_props.serialise
-    - fsleyes_props.suppress
-    - fsleyes_props.syncable
-    - fsleyes_props.widgets
-    - fsleyes_props.widgets_boolean
-    - fsleyes_props.widgets_bounds
-    - fsleyes_props.widgets_choice
-    - fsleyes_props.widgets_list
-    - fsleyes_props.widgets_number
-    - fsleyes_props.widgets_point
 
 
 about:
