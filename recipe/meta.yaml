@@ -27,7 +27,7 @@ requirements:
     - matplotlib-base >=1.5
     - six
     - wxpython >=3.0.2.0
-    - fsleyes-widgets >=0.6.*
+    - fsleyes-widgets >=0.6
     - fslpy >=1.4
 
 test:
