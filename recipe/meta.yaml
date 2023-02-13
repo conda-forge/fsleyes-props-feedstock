@@ -1,6 +1,6 @@
 {% set name = "fsleyes-props" %}
-{% set version = "1.8.2" %}
-{% set sha256 = "918c855a71c594a245dad65b81fe1f25f9e6156c056d10466327f9998fdf500b" %}
+{% set version = "1.8.3" %}
+{% set sha256 = "3ec2b7a1c584530a2108618c277f8461492468856393efaf6f0c823f9875c1e0" %}
 
 package:
   name: {{ name|lower }}
@@ -27,7 +27,7 @@ requirements:
     - matplotlib-base >=1.5
     - six
     - wxpython >=3.0.2.0
-    - fsleyes-widgets >=0.6.*
+    - fsleyes-widgets >=0.6
     - fslpy >=1.4
 
 test:
