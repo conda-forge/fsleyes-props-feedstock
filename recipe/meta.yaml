@@ -1,6 +1,6 @@
 {% set name = "fsleyes-props" %}
-{% set version = "1.8.3" %}
-{% set sha256 = "3ec2b7a1c584530a2108618c277f8461492468856393efaf6f0c823f9875c1e0" %}
+{% set version = "1.9.0" %}
+{% set sha256 = "f7e84f812c6e6eb6aef5bc7355ffa102adf857e3d00ab197eaf4a03eade0b9c9" %}
 
 package:
   name: {{ name|lower }}
