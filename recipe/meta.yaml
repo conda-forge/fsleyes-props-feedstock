@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.5
     - numpy
-    - matplotlib-base >=1.5
+    - matplotlib-base >=3.5
     - six
     - wxpython >=3.0.2.0
     - fsleyes-widgets >=0.6
