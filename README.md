@@ -1,11 +1,11 @@
-About fsleyes-props
-===================
+About fsleyes-props-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fsleyes-props-feedstock/blob/main/LICENSE.txt)
 
 Home: https://git.fmrib.ox.ac.uk/fsl/fsleyes/props/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fsleyes-props-feedstock/blob/main/LICENSE.txt)
 
 Summary: [wx]Python event programming framework
 
