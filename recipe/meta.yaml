@@ -1,6 +1,6 @@
 {% set name = "fsleyes-props" %}
-{% set version = "1.9.6" %}
-{% set sha256 = "f4ab6f4b3198d568b8c2c141cbf6351ad80f3149e52de2735b89a41540e46180" %}
+{% set version = "1.10.0" %}
+{% set sha256 = "1c38436f0c2f0d6c9d0a90954561d30d1ff323f2bbd14d396a56250720e7dae9" %}
 
 package:
   name: {{ name|lower }}
@@ -19,20 +19,19 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.8
     - pip
   run:
-    - python >=3.5
+    - python >=3.8
     - numpy
     - matplotlib-base >=3.5
-    - six
     - wxpython >=3.0.2.0
     - fsleyes-widgets >=0.6
     - fslpy >=1.4
 
 test:
   source_files:
-    - tests
+    - fsleyes_props/tests
   requires:
     - mock
     - coverage
